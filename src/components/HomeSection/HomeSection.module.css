@@ -10,17 +10,17 @@
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1280px),
 screen and (min-resolution: 2dppx) and (min-width: 1280px),
-screen and (min-devace-pixel-ratio: 2) and (min-width: 1280px) {
+screen and (min-device-pixel-ratio: 2) and (min-width: 1280px) {
   .homeSection {
     background-image: url("../../images/HomePicture@2x.jpg");
   }
 }
 
 .h1Text {
-  font-size: 40px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 600;
-  line-height: 80%;
+  line-height: 32px;
   color: var(--inputs);
 
   margin-top: 260px;
@@ -28,24 +28,13 @@ screen and (min-devace-pixel-ratio: 2) and (min-width: 1280px) {
 }
 
 .h3Text {
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 133.33%;
+  line-height: 32px;
   color: var(--inputs);
 
   margin-bottom: 40px;
-}
-
-@media screen and (min-width: 768px) {
-  .h1Text {
-    font-size: 48px;
-    line-height: 66.67%;
-  }
-
-  .h3Text {
-    font-size: 24px;
-  }
 }
 
 .vievNowBtn {
