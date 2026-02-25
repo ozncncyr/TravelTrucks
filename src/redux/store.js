@@ -1,13 +1,14 @@
-// import { configureStore, combineReducers } from "@reduxjs/toolkit";
-// import { persistStore, persistReducer } from "redux-persist";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-// // import storage from "redux-persist/lib/storage";
-// // import trucksSlicer from "./trucks/slicer.js";
-// // import filtersSlicer from "./filters/slicer.js";
-// // import isFavoriteSlicer from "./isFavorite/slicer.js";
+import trucksSlicer from "./trucks/slicer.js";
+import filtersSlicer from "./filters/slicer.js";
+import isFavoriteSlicer from "./isFavorite/slicer.js";
 
-// const rootReducer = combineReducers({
-//   trucks: trucksSlicer,
-//   filters: filtersSlicer,
-//   isFavorite: isFavoriteSlicer,
-// });
+const rootReducer = combineReducers({
+  trucks: trucksSlicer,
+  filters: filtersSlicer,
+  // reviews: reviewsSlicer,
+  isFavorite: isFavoriteSlicer,
+});
