@@ -2,9 +2,9 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import trucksSlicer from "./trucks/slicer.js";
-import filtersSlicer from "./filters/slicer.js";
-import isFavoriteSlicer from "./isFavorite/slicer.js";
+import trucksSlicer from "./trucks/slice.js";
+import filtersSlicer from "./filters/slice.js";
+import isFavoriteSlicer from "./isFavorite/slice.js";
 
 const rootReducer = combineReducers({
   trucks: trucksSlicer,

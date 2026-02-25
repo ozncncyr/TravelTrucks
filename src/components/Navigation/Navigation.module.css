@@ -1,0 +1,21 @@
+.navigationList {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.linkItem {
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--main);
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.linkItem:hover {
+  transform: scale(1.1);
+}

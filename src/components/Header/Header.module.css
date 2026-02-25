@@ -1,0 +1,38 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  background-color: var(--inputs);
+
+
+}
+
+.divLogo {
+  grid-column: 1 / 2;
+  justify-content: start;
+  padding-left: 24px;
+}
+
+.logo {
+  color: var(--main);
+  font-weight: 800;
+}
+
+.logoSpan {
+  color: var(--text);
+}
+
+.linkItem {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--main);
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.linkItem.active {
+  color: var(--button-hover);
+}
