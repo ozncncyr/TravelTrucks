@@ -1,8 +1,13 @@
-// CatalogPage component
-import React from "react";
+import FiltersForm from "../../components/FiltersForm/FiltersForm";
+import CamperList from "../../components/CamperList/CamperList";
+import css from "./CatalogPage.module.css";
+import "../../index.css";
 
-const CatalogPage = () => {
-  return <div>Catalog page will be implemented soon</div>;
-};
-
-export default CatalogPage;
+export default function CatalogPage() {
+  return (
+    <section className={`${css.CatalogPage} section scrollable-content`}>
+      <FiltersForm className={css.Filters} />
+      <CamperList className={css.camperList} />
+    </section>
+  );
+}
