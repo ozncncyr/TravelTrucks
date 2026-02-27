@@ -1,0 +1,120 @@
+.vehicleCard {
+  display: grid;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--light-gray);
+  line-height: 2em;
+  font-size: 16px;
+}
+
+.truckImage {
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+.truckImage>img {
+  border-radius: 10px;
+}
+
+.truckHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.truckName {
+  font-size: 24px;
+  line-height: 1.6em;
+}
+
+.truckPriceContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.truckPrice {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.svgBorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--main);
+  transition: fill 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.svgBorderActive {
+  fill: var(--button);
+  transition: fill 250ms ease-in-out;
+}
+
+.truckDescription {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 24px;
+}
+
+.truckFeatures {
+  display: grid;
+  gap: 8px;
+  font-weight: 500;
+  grid-template-columns: repeat(auto-fit, minmax(0, max-content));
+  margin-bottom: 24px;
+  user-select: none;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: var(--badges);
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  padding: 12px 18px;
+}
+
+.featureItemName {
+  display: block;
+  color: var(--main);
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.featureIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.showMoreButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.showMoreButton {
+  padding: 16px 60px;
+  font-weight: 500;
+  border-radius: 200px;
+  background-color: var(--button);
+  color: var(--white);
+  font-size: 16px;
+  letter-spacing: -0.08px;
+  user-select: none;
+  transition: background-color 250ms ease-in-out;
+}
+
+.showMoreButton:hover {
+  background-color: var(--button-hover);
+}
