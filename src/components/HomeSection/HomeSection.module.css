@@ -22,7 +22,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1280px) {
   font-weight: 600;
   line-height: 32px;
   color: var(--inputs);
-
   margin-top: 260px;
   margin-bottom: 16px;
 }
@@ -33,7 +32,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1280px) {
   font-weight: 600;
   line-height: 32px;
   color: var(--inputs);
-
   margin-bottom: 40px;
 }
 
@@ -41,14 +39,11 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1280px) {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 173px;
   height: 56px;
-
   background-color: var(--button);
   border: 0;
   border-radius: 200px;
-
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
