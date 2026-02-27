@@ -3,7 +3,7 @@ import "../../index.css";
 import { Link } from "react-router-dom";
 import sprite from "../../images/icons.svg";
 import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
-import { setIsFavorite } from "../../redux/isFavorite/slicer.js";
+import { setIsFavorite } from "../../redux/isFavorite/slice.js";
 import { useDispatch, useSelector } from "react-redux";
 import { selectorIsFavorite } from "../../redux/isFavorite/selectors.js";
 
