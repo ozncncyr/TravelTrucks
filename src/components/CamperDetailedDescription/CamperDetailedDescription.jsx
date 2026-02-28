@@ -64,7 +64,6 @@ export default function CamperDetailedDescription() {
           ))}
         </Swiper>
       )}
-
       <p className={css.truckDescription}>{truck.description}</p>
     </>
   );

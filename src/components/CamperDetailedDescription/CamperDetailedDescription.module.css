@@ -1,6 +1,43 @@
-.container {
-  padding: 24px;
-  background: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+.truckName {
+  color: var(--main);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.33%;
+  margin-bottom: 8px;
+}
+
+.truckPrice {
+  color: var(--main);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.33%;
+  margin-bottom: 28px;
+}
+
+.imgList {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  user-select: none;
+  margin-bottom: 28px;
+}
+
+.imgItem {
+  object-fit: cover;
+  border-radius: 10px;
+  height: 312px;
+}
+
+.li {
+    width: calc((100% - 3 * 48px) / 3);
+  }
+
+  .truckDescription {
+  color: var(--text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
