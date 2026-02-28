@@ -1,8 +1,30 @@
-// CamperDetailsPage component
-import React from "react";
+import { useParams } from "react-router-dom";
+import CamperDetailedDescription from "../../components/CamperDetailedDescription/CamperDetailedDescription.jsx";
+import CamperDetailedInfo from "../../components/CamperDetailedInfo/CamperDetailedInfo.jsx";
+import "../../index.css";
+import css from "./CamperDetailsPage.module.css";
+import { useSelector } from "react-redux";
+import { selectTrucks } from "../../redux/trucks/selectors.js";
+import NotFoundPage from "../NotFoundPage/NotFoundPage.jsx";
 
-const CamperDetailsPage = () => {
-  return <div>Camper Details Page</div>;
-};
+export default function CamperDetailsPage() {
+  const { camperId } = useParams();
+  const trucksFirst = Number(useSelector(selectTrucks)[0].id);
+  const trucksLength = useSelector(selectTrucks).length;
 
-export default CamperDetailsPage;
+  if (Number(camperId) >= trucksFirst && Number(camperId) <= trucksLength) {
+    return (
+      <div className={`scrollable-content`}>
+        <section className={`${css.CamperDetailedDescription} section`}>
+          <CamperDetailedDescription />
+        </section>
+
+        <section className={`${css.CamperDetailedInfo} section`}>
+          <CamperDetailedInfo />
+        </section>
+      </div>
+    );
+  } else {
+    return <NotFoundPage />;
+  }
+}
