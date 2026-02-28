@@ -1,6 +1,33 @@
-.container {
-  padding: 24px;
-  background: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+.reviewSection {
+  margin-top: 12px;
+}
+
+.reviewContainer {
+  display: flex;
+  margin-bottom: 44px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--badges);
+  font-size: 24px;
+  color: var(--button);
+  margin-right: 16px;
+}
+
+.reviewName {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.reviewComment {
+  color: var(--text);
+  font-size: 16px;
 }
