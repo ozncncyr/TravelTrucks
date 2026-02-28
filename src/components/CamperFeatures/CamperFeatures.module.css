@@ -1,6 +1,53 @@
 .container {
-  padding: 24px;
-  background: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    gap: 100px;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--inputs, #F7F7F7);
+    padding: 44px 52px;
+}
+
+.menuIcons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.menuItemIcon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--badges);
+    mix-blend-mode: multiply;
+    padding: 12px 18px;
+}
+
+.vehicleDetails {
+    color: var(--main);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.formMenu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.formItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formItem p {
+    color: var(--main);
+    font-weight: 500;
+    line-height: 150%;
 }
