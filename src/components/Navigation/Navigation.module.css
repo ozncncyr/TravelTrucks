@@ -1,9 +1,32 @@
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .navigationList {
   grid-column: 2 / 3;
   display: flex;
   flex-direction: row;
   gap: 32px;
   margin-left: -58px;
+}
+.backButton {
+  margin-left: 32px;
+  padding: 10px 24px;
+  border-radius: 200px;
+  background-color: var(--button);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.backButton:hover {
+  background-color: var(--button-hover);
 }
 
 .linkItem {

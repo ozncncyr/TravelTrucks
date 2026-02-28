@@ -1,12 +1,13 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useMatch } from "react-router-dom";
 
 import css from "./Navigation.module.css";
 
 export default function Navigation() {
   const { pathname } = useLocation();
+  const isDetailsPage = useMatch("/catalog/:camperId");
 
   return (
-    <nav>
+    <nav className={css.navWrapper}>
       <ul className={css.navigationList}>
         <li>
           <NavLink
@@ -27,6 +28,14 @@ export default function Navigation() {
           </NavLink>
         </li>
       </ul>
+      {isDetailsPage && (
+        <button
+          className={css.backButton}
+          onClick={() => window.history.back()}
+        >
+          ← Back to Catalog
+        </button>
+      )}
     </nav>
   );
 }
