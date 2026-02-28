@@ -17,14 +17,37 @@
   --yellow: #ffc531;
 }
 
-body {
+
+html, body {
   font-family: "Inter", "Helvetica Neue", "Roboto", sans-serif;
   font-size: 16px;
   background-color: var(--white);
   color: var(--main);
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  height: 100%;
 }
+
+.scrollable-content {
+  overflow-y: scroll;
+  height: 90vh;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--light-gray);
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text);
+}
+
 
 h1,
 h2,
@@ -41,8 +64,8 @@ p {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5em;
-  font-size: 14px;
+  line-height: 24px;
+  font-size: 16px;
 }
 
 ul,
@@ -88,17 +111,11 @@ input {
 }
 
 .section {
-  padding: 16px;
+  padding: 64px;
 }
 
 fieldset {
   border: none;
   padding: 0;
   margin: 0;
-}
-
-@media screen and (min-width: 1280px) {
-  .section {
-    padding: 64px;
-  }
 }
