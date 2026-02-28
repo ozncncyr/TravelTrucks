@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { selectTrucks } from "../../redux/trucks/selectors.js";
 import css from "./CamperFeatures.module.css";
-import sprite from "../../images/icons.svg";
+import sprite from "../../assets/icons.svg";
 
 const ICONS_LIST = {
   AC: "AC",

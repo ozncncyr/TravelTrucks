@@ -20,6 +20,9 @@
   display: flex;
   gap: 48px;
   flex-wrap: wrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   margin-bottom: 28px;
 }

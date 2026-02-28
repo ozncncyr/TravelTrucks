@@ -1,5 +1,5 @@
 import css from "./MenuTruckRateLoc.module.css";
-import Icon from "../../images/icons.svg";
+import Icon from "../../assets/icons.svg";
 import { Link } from "react-router-dom";
 
 export default function MenuTruckRateLoc({ truck, to }) {

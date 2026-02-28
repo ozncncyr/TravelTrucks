@@ -10,6 +10,9 @@
 
 .truckImage {
   margin-bottom: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -70,6 +73,9 @@
   font-weight: 500;
   grid-template-columns: repeat(auto-fit, minmax(0, max-content));
   margin-bottom: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -111,6 +117,9 @@
   color: var(--white);
   font-size: 16px;
   letter-spacing: -0.08px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   transition: background-color 250ms ease-in-out;
 }

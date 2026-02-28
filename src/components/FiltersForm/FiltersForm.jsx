@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../../redux/filters/slice.js";
 import css from "./FiltersForm.module.css";
 import { useState, useEffect } from "react";
-import sprite from "../../images/icons.svg";
+import sprite from "../../assets/icons.svg";
 import { selectFilters } from "../../redux/filters/selectors.js";
 import { toggleFavorites } from "../../redux/isFavorite/slice.js";
 import { selectorBooleanFavorite } from "../../redux/isFavorite/selectors.js";

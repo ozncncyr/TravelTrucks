@@ -43,6 +43,9 @@
 .locationTitle {
   margin-bottom: 8px;
   color: var(--dark-gray);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -53,6 +56,9 @@
   border-radius: 12px;
   padding-left: 20px;
   margin-bottom: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -75,6 +81,9 @@
   width: 20px;
   height: 20px;
   margin-right: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -109,6 +118,9 @@
   align-items: center;
   text-align: center;
   gap: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -172,6 +184,9 @@
   background-color: var(--button);
   color: var(--white);
   font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   transition: background-color 250ms ease-in-out;
