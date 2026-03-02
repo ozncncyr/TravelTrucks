@@ -42,7 +42,7 @@ export default function FiltersForm() {
   };
 
   const handleLocationChange = (e) => {
-    const newLocation = e.target.value;
+    const newLocation = e.target.value.trim();
     setFiltersForm((prevFilters) => ({
       ...prevFilters,
       location: newLocation,
@@ -51,6 +51,49 @@ export default function FiltersForm() {
 
   const handleSearch = () => {
     return dispatch(setFilter(filtersForm));
+  };
+
+  // Check if any filter or location is set
+  const isAnyFilterActive = () => {
+    // Check location
+    if (filtersForm.location && filtersForm.location.trim() !== "") return true;
+    // Check equipment
+    const equipmentLabels = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
+    if (equipmentLabels.some((label) => filtersForm[label.replace(/\s+/g, "")]))
+      return true;
+    // Check vehicle type
+    const typeLabels = ["Van", "Fully Integrated", "Alcove"];
+    if (typeLabels.some((label) => filtersForm[label.replace(/\s+/g, "")]))
+      return true;
+    return false;
+  };
+
+  // Clear all filters
+  const handleClearFilters = () => {
+    setFiltersForm({
+      location: "",
+      AC: false,
+      Automatic: false,
+      Kitchen: false,
+      TV: false,
+      Bathroom: false,
+      Van: false,
+      FullyIntegrated: false,
+      Alcove: false,
+    });
+    dispatch(
+      setFilter({
+        location: "",
+        AC: false,
+        Automatic: false,
+        Kitchen: false,
+        TV: false,
+        Bathroom: false,
+        Van: false,
+        FullyIntegrated: false,
+        Alcove: false,
+      }),
+    );
   };
 
   const handleFavoriteClick = (e) => {
@@ -164,6 +207,15 @@ export default function FiltersForm() {
           >
             Search
           </button>
+          {isAnyFilterActive() && (
+            <button
+              className={css.clearButton}
+              type="button"
+              onClick={handleClearFilters}
+            >
+              Clear filters
+            </button>
+          )}
         </div>
       </form>
     </div>
