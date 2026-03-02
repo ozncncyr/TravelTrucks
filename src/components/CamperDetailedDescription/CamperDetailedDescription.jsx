@@ -4,6 +4,7 @@ import "../../index.css";
 import css from "./CamperDetailedDescription.module.css";
 import { selectTrucks } from "../../redux/trucks/selectors.js";
 import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
+import { priceFormat } from "../../utility/priceFormat";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -29,7 +30,7 @@ export default function CamperDetailedDescription() {
       <h2 className="visually-hidden">Info truck card</h2>
       <h3 className={css.truckName}>{truck.name}</h3>
       <MenuTruckRateLoc truck={truck} to={`/catalog/${truck.id}`} />
-      <p className={css.truckPrice}>€{truck.price}</p>
+      <p className={css.truckPrice}>€ {priceFormat(truck.price)}</p>
 
       {duplicatedGallery.length > 0 && (
         <Swiper
