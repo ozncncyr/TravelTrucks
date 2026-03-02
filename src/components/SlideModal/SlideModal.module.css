@@ -31,9 +31,16 @@
   right: 16px;
   background: transparent;
   border: none;
-  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
   cursor: pointer;
   color: #e44848;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #c93030;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .imageContainer {
