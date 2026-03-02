@@ -21,11 +21,24 @@ export default function FiltersForm() {
   const handleCheck = (e) => {
     const { name, checked } = e.target;
     const formattedName = name.replace(/\s+/g, "");
-
-    setFiltersForm((prevFilters) => ({
-      ...prevFilters,
-      [formattedName]: checked,
-    }));
+    // Vehicle type options
+    const vehicleTypeLabels = ["Van", "Fully Integrated", "Alcove"];
+    if (vehicleTypeLabels.includes(name)) {
+      // Uncheck all vehicle type options except the one selected
+      setFiltersForm((prevFilters) => {
+        const updated = { ...prevFilters };
+        vehicleTypeLabels.forEach((type) => {
+          updated[type.replace(/\s+/g, "")] = false;
+        });
+        updated[formattedName] = checked;
+        return updated;
+      });
+    } else {
+      setFiltersForm((prevFilters) => ({
+        ...prevFilters,
+        [formattedName]: checked,
+      }));
+    }
   };
 
   const handleLocationChange = (e) => {
