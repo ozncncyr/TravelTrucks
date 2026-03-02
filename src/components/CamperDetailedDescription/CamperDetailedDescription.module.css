@@ -18,19 +18,20 @@
 
 .imgList {
   display: flex;
-  gap: 48px;
-  flex-wrap: wrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-bottom: 28px;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 24px;
 }
 
 .imgItem {
+  max-width: 420px;
+  max-height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
   object-fit: cover;
-  border-radius: 10px;
-  height: 312px;
 }
 
 .li {

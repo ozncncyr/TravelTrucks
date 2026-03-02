@@ -5,6 +5,8 @@ import css from "./CamperDetailedDescription.module.css";
 import { selectTrucks } from "../../redux/trucks/selectors.js";
 import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 import { priceFormat } from "../../utility/priceFormat";
+import SlideModal from "../SlideModal/SlideModal.jsx";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -17,6 +19,9 @@ export default function CamperDetailedDescription() {
   const truck = useSelector(selectTrucks)[camperId - 1];
   const duplicatedGallery = [];
 
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [modalIndex, setModalIndex] = React.useState(0);
+
   if (truck.gallery.length <= 3) {
     for (let i = 0; i < 3; i++) {
       truck.gallery.map((elem) => duplicatedGallery.push(elem));
@@ -24,6 +29,11 @@ export default function CamperDetailedDescription() {
   } else {
     duplicatedGallery.push(truck.gallery);
   }
+
+  const handleImageClick = (idx) => {
+    setModalIndex(idx);
+    setModalOpen(true);
+  };
 
   return (
     <>
@@ -33,37 +43,27 @@ export default function CamperDetailedDescription() {
       <p className={css.truckPrice}>€ {priceFormat(truck.price)}</p>
 
       {duplicatedGallery.length > 0 && (
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={24}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          speed={800}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 36,
-            },
-            1280: {
-              slidesPerView: 3,
-            },
-          }}
-          className={css.imgList}
-        >
-          {truck.gallery.map((img, id) => (
-            <SwiperSlide key={id} className={css.imgSlide}>
+        <>
+          <div className={css.imgList}>
+            {truck.gallery.map((img, id) => (
               <img
+                key={id}
                 className={css.imgItem}
                 src={img.thumb}
                 alt={`${truck.name} image`}
+                style={{ cursor: "pointer", marginRight: 12 }}
+                onClick={() => handleImageClick(id)}
               />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            ))}
+          </div>
+          <SlideModal
+            images={truck.gallery}
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            initialIndex={modalIndex}
+            title={truck.name}
+          />
+        </>
       )}
       <p className={css.truckDescription}>{truck.description}</p>
     </>
